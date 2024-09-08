@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./assets/images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #064E3B;font-weight: 600;"><img src="./assets/images/fav.png"
+                    height="40px" style="max-height: 40px;" alt="" srcset="">TicketTrak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-4">
+                        <a class="nav-link active" style="font-weight: 700;" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="book.html">Book Ticket</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="view.html">View Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#" tabindex="-1"
+                            style="background-color: #65A30D;color: #ECFDF5 !important; border-radius: 8px;padding: 8px 18px; text-align: center;"
+                            aria-disabled="true">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row px-4 m-0 hero-container">
+        <div class="col-sm-12 col-md-6 p-5 hero-text">
+            <div class="title">
+                <h1>Welcome to TicketTrak - Your Ultimate Ticket Booking Portal</h1>
+                <p>Easily Book, Manage, and View Your Train Tickets with Just a Few Clicks</p>
+                <button type="button" class="btn btn-success"><a href="book.html" style="text-decoration: none;color: white;">Book Now</a></button>
+                <button type="button" style="background-color: transparent;border: 1px solid #65A30D;color: #65A30D;"
+                    class="btn btn-outline-success ms-3"><a href="view.html" style="text-decoration: none;color: #65A30D;">View Ticket</a></button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 hero-image">
+            <img src="./assets/images/Image  --lummi.png" alt="Train Image">
+        </div>
+    </div>
+    <div class="col-md-12 arrow">
+        <a href="#features" style="text-decoration: none;color: black;">
+            <p>⌃</p>
+        </a>
+    </div>
+    <div class="features" id="features">
+        <h1 class="ps-5 ms-5 pt-5" style="color: #064E3B;font-size: 36px;font-weight: 700;">Features</h1>
+        <div class="row row-cols-1 row-cols-md-4 col-sm-12 g-4 m-5 mt-0 pt-0 p-5">
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-ticket-perforated" viewBox="0 0 16 16">
+                            <path
+                                d="M4 4.85v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9z" />
+                            <path
+                                d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3zM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9z" />
+                        </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Book your Tickets</h5>
+                <div class="features-content">Book Your Tickets in Seconds – Find and book your train tickets
+                    effortlessly.</div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-card-checklist" viewBox="0 0 16 16">
+                            <path
+                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                            <path
+                                d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+                        </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Booking History</h5>
+                <div class="features-content">View Your Booking History – Access all your past bookings in one place.
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-person-check" viewBox="0 0 16 16">
+                            <path
+                                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                            <path
+                                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                        </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Update Profile</h5>
+                <div class="features-content">Update Your Details – Easily update your contact information and manage
+                    your profile</div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Cancel Ticket</h5>
+                <div class="features-content">Cancel Tickets with Ease – Quickly cancel your bookings with a simple
+                    confirmation.</div>
+            </div>
+        </div>
+    </div>
+    <div class="row px-4 m-0 hero-container" style="align-items: center;height: fit-content;">
+        <div class="col-12 col-md-12 p-5 hero-text">
+            <h1 style="font-size: 4vw;font-weight: 800;">Ticket Booking Statistics & Sales Insights</h1>
+        </div>
+        <div class="col-12 col-md-6 p-5 pt-0 hero-text">
+            <div>
+                <h1 style="font-size: 3vw;font-weight: 300;" class="table-title">Ticket Bookings by Class</h1>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">SNo</th>
+                            <th scope="col">Class of Travel</th>
+                            <th scope="col">Number of tickets booked</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <th scope="row">First Class</th>
+                            <td>120</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <th scope="row">AC Tier 1</th>
+                            <td>85</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <th scope="row">AC Tier 2</th>
+                            <td>190</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <th scope="row">Tatkal</th>
+                            <td>40</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <th scope="row">General</th>
+                            <td>150</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 graph-image">
+            <div style="position: relative; width: 100%; padding-top: 56.25%; /* Maintain aspect ratio */
+                box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; overflow: hidden; border-radius: 8px; background-color: transparent;">
+                <iframe loading="lazy" 
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; background-color: transparent;" 
+                    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGQFTqocfc&#x2F;g_0Z4325lEOJVKfdSdfe0g&#x2F;view?embed" 
+                    >
+                </iframe>
+            </div>
+        </div>        
+    </div>
+    
+
+    <div class="row px-4 m-0 hero-container" style="align-items: center; height: max-content;">
+        <div class="col-sm-12 col-md-6 graph-image">
+            <div style="position: relative; width: 100%;padding-top: 56.25%; /* Maintain aspect ratio */
+                box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; overflow: hidden; border-radius: 8px; background-color: transparent;">
+                <iframe loading="lazy" 
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; background-color: transparent;" 
+                    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGQFVepwmU&#x2F;3NBpw1pX-w48qQtENJd9Kw&#x2F;view?embed" 
+                    >
+                </iframe>
+            </div>
+        </div>       
+        <div class="col-12 col-md-6 p-5 hero-text">
+            <div class="title p-3">
+                <h1 style="font-size: 3vw;font-weight: 300;" class="table-title">Quarterly Sales Summary</h1>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">SNo</th>
+                            <th scope="col">Quarter</th>
+                            <th scope="col">Total Sales(₹)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <th scope="row">Q1</th>
+                            <td>1,50,000</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <th scope="row">Q2</th>
+                            <td>2,10,000</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <th scope="row">Q3</th>
+                            <td>1,80,000</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <th scope="row">Q4</th>
+                            <td>2,75,000</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="features">
+        <h1 class="ps-5 ms-5 pt-5" style="color: #064E3B;font-size: 36px;font-weight: 700;">Ready for Your Next Journey?</h1>
+        <div class="row row-cols-12 row-cols-md-12 g-4 m-5 mb-0 mt-0 pt-0 p-5">
+            <div class="col">
+                <h5 style="color: #064E3B;">Discover the Ease of Booking Your Tickets with Us!</h5>
+                <div class="features-content" style="width: auto;">Planning your trip has never been this simple. Whether it's First Class luxury or the swift Tatkal service, your perfect journey is just a few clicks away. Choose your preferred travel class, find the most convenient trains, and set off on your next adventure effortlessly.</div>
+            </div>
+        </div>
+        <h1 class="ps-5 ms-5 pt-0" style="color: #064E3B;font-size: 36px;font-weight: 700;">Why choose us!</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4 m-5 mb-2 mt-0 pt-0 p-5 pb-0">
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-ticket-perforated" viewBox="0 0 16 16">
+                            <path
+                                d="M4 4.85v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9zm-7 1.8v.9h1v-.9zm7 0v.9h1v-.9z" />
+                            <path
+                                d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3zM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9z" />
+                        </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Hassle-Free Booking</h5>
+                <div class="features-content">Seamless and quick ticket reservations.</div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-train-freight-front" viewBox="0 0 16 16">
+                            <path d="M5.065.158A1.5 1.5 0 0 1 5.736 0h4.528a1.5 1.5 0 0 1 .67.158l3.237 1.618a1.5 1.5 0 0 1 .83 1.342V13.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V3.118a1.5 1.5 0 0 1 .828-1.342zM2 9.372V13.5A1.5 1.5 0 0 0 3.5 15h4V8h-.853a.5.5 0 0 0-.144.021zM8.5 15h4a1.5 1.5 0 0 0 1.5-1.5V9.372l-4.503-1.35A.5.5 0 0 0 9.353 8H8.5zM14 8.328v-5.21a.5.5 0 0 0-.276-.447l-3.236-1.618A.5.5 0 0 0 10.264 1H5.736a.5.5 0 0 0-.223.053L2.277 2.67A.5.5 0 0 0 2 3.118v5.21l1-.3V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.028zm-2-.6V5H8.5v2h.853a1.5 1.5 0 0 1 .431.063zM7.5 7V5H4v2.728l2.216-.665A1.5 1.5 0 0 1 6.646 7zm-1-5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-3 8a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1m9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1M5 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Multiple Travel Classes</h5>
+                <div class="features-content"> From First Class to Tatkal, find what suits you.</div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar2-check" viewBox="0 0 16 16">
+                            <path d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/>
+                          </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Real-Time Availability</h5>
+                <div class="features-content">Get up-to-date train information and seat availability.</div>
+            </div>
+            <div class="col">
+                <div class="mb-3 features-num">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                            <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                          </svg>
+                    </div>
+                </div>
+                <h5 style="color: #064E3B;">Exclusive Offers</h5>
+                <div class="features-content">Unlock the best deals and offers for frequent travelers.</div>
+            </div>
+        </div>
+        <div class="row row-cols-12 row-cols-md-12 g-4 m-5 mb-0 mt-0 pt-0 p-5">
+            <div class="col">
+                <h5 style="color: #064E3B;">Ready to Go?</h5>
+                <div class="features-content" style="width: auto;">Click the button below to start your booking and embark on your next adventure today!</div>
+                <button type="button" class="btn btn-primary mt-4" style="padding: 14px 64px; border-radius: 8px; background-color: #065f46; font-size: 18px; color: white;">
+                    <a href="book.html" style="text-decoration: none;color: white;">Book Now</a>
+                </button>                    
+            </div>
+        </div>
+    </div>
+    <footer class="footer p-5"></footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>TicketTrak</h2>
+                </div>
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <p>
+                        TicketTrak makes train travel easy with quick ticket bookings and seamless management. Enjoy hassle-free travel planning with just a few clicks!
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li>Home</li>
+                        <li>Book Now</li>
+                        <li>View Tickets</li>
+                        <li>Profile</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1233567890</li>
+                        <li>Address: 123 Street, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Your Website. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <ul class="list-inline footer-links">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                Sitemap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

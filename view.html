@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #064E3B;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        h5{
+            font-size: 1.1vw;
+            margin-bottom: 0;
+        }
+        .tc{
+            font-size: 1vw;
+        }
+        p{
+            font-size: .9vw;
+        }
+        @media (max-width: 767.98px) {
+            h5{
+                font-size: 2vw;
+            }
+            p{
+                font-size: 1.8vw;
+            }
+            .tc{
+                font-size: 1.7vw;
+            }
+        }
+        .hidden-part {
+            display: none;
+        }
+
+        .card.expanded .hidden-part {
+            display: block;
+        }
+
+        .view-tickets{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .card{
+            width: 80%;
+            height: fit-content;
+            background-color: #D1FAE5;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .card:hover{
+            cursor: pointer;
+        }
+        .train-id{
+            background-color: rgba(224, 223, 223, 0.287);
+        }
+        .line{
+            border: 1px solid rgba(128, 128, 128, 0.158);
+            margin: 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #064E3B;font-weight: 600;"><img src="./assets/images/fav.png" height="40px" style="max-height: 40px;" alt="" srcset="">TicketTrak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="book.html">Book Ticket</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active" style="font-weight: 700;" aria-current="page"  href="#">View Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#" tabindex="-1" style="background-color: #65A30D;color: #ECFDF5 !important; border-radius: 8px;padding: 8px 18px; text-align: center;" aria-disabled="true">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="view-tickets">
+        <div class="card">
+            <div class="train-id d-flex justify-content-between p-3 py-1">
+                <h5 class="train-name" style="color: #064E3B;">CIRCAR EXPRESS (17644)</h5>
+                <h5 class="pnr-no" style="color: orangered;">PNR: 4824633563</h5>
+            </div>
+            <div class="destination d-flex justify-content-between p-3 pb-0">
+                <div class="">
+                    <h5 class="pickup m-0">16:40 | Tanuku (TNKU)</h5>
+                    <p class="time">Tue, 20 Aug</p>
+                </div>
+                <div class="">
+                    <h5 class="pickup m-0">⎯&nbsp; 14h 03m&nbsp; ⎯</h5>
+                </div>
+                <div class="">
+                    <h5 class="pickup m-0">06:43 | Tambaram (TBM)</h5>
+                    <p class="time">Tue, 21 Aug</p>
+                </div>
+            </div>
+            <div class="status d-flex justify-content-between p-3 py-1">
+                <h5 class="train-name" style="color: green;">STATUS: BOOKED</h5>
+                <h5 class="pnr-no">Boarding Station: Tanuku (TNKU)</h5>
+            </div>
+            <div class="hidden-part">
+                <div class="total-passengers pt-2 d-flex justify-content-center">
+                    <h5>1 Adult | 0 Child | AC 3 Tier (3A) | General</h5>
+                </div>
+                <div class="line"></div>
+                <div class="passenger-info px-3">
+                    <h5>Passenger Information</h5>
+                    <table class="table" style="width: max-content;border: transparent;">
+                        <tbody>
+                          <tr>
+                            <th class="py-1 pb-0 tc" scope="row">1</th>
+                            <th class="py-1 pb-0 tc">Vanapalli Sriram</th>
+                            <th class="py-1 pb-0 tc">21 yrs | Male</th>
+                          </tr>
+                          <tr>
+                            <th class="pb-0 pt-1 tc" scope="row"></th>
+                            <td class="pb-0 tc pt-1">Booking Status</td>
+                            <td class="pb-0 pt-1 tc">Coach</td>
+                            <td class="pb-0 pt-1 tc">Berth/WL No</td>
+                            <td class="pb-0 pt-1 tc">Berth Type</td>
+                            <td class="pb-0 pt-1 tc">Current Status</td>
+                          </tr>
+                          <tr>
+                            <th class="tc py-0" scope="row"></th>
+                            <th class="tc py-0">CNF/B5/57/LB</th>
+                            <th class="tc py-0">B5</th>
+                            <th class="tc py-0">57</th>
+                            <th class="tc py-0">Lower</th>
+                            <th class="tc py-0" style="color: green;">CNF/B5/57/LB</th>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                                    Cancel
+                                </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="train-id d-flex justify-content-between p-3 py-1">
+                <h5 class="train-name" style="color: #064E3B;">RAJDHANI EXPRESS (12951)</h5>
+                <h5 class="pnr-no" style="color: orangered;">PNR: 6382945628</h5>
+            </div>
+            <div class="destination d-flex justify-content-between p-3 pb-0">
+                <div class="">
+                    <h5 class="pickup m-0">20:05 | Vijayawada (BZA)</h5>
+                    <p class="time">Wed, 18 Sep</p>
+                </div>
+                <div class="">
+                    <h5 class="pickup m-0">⎯&nbsp; 17h 25m&nbsp; ⎯</h5>
+                </div>
+                <div class="">
+                    <h5 class="pickup m-0">13:30 | New Delhi (NDLS)</h5>
+                    <p class="time">Thu, 19 Sep</p>
+                </div>
+            </div>
+            <div class="status d-flex justify-content-between p-3 py-1">
+                <h5 class="train-name" style="color: green;">STATUS: BOOKED</h5>
+                <h5 class="pnr-no">Boarding Station: Vijayawada (BZA)</h5>
+            </div>
+            <div class="hidden-part">
+                <div class="total-passengers pt-2 d-flex justify-content-center">
+                    <h5>2 Adults | 0 Child | AC 2 Tier (2A) | General</h5>
+                </div>
+                <div class="line"></div>
+                <div class="passenger-info px-3">
+                    <h5>Passenger Information</h5>
+                    <table class="table" style="width: max-content;border: transparent;">
+                        <tbody>
+                          <tr>
+                            <th class="py-1 pb-0 tc" scope="row">1</th>
+                            <th class="py-1 pb-0 tc">Ravi Kumar</th>
+                            <th class="py-1 pb-0 tc">35 yrs | Male</th>
+                          </tr>
+                          <tr>
+                            <th class="py-1 pb-0 tc" scope="row">2</th>
+                            <th class="py-1 pb-0 tc">Sushma Reddy</th>
+                            <th class="py-1 pb-0 tc">32 yrs | Female</th>
+                          </tr>
+                          <tr>
+                            <th class="pb-0 pt-1 tc" scope="row"></th>
+                            <td class="pb-0 tc pt-1">Booking Status</td>
+                            <td class="pb-0 pt-1 tc">Coach</td>
+                            <td class="pb-0 pt-1 tc">Berth/WL No</td>
+                            <td class="pb-0 pt-1 tc">Berth Type</td>
+                            <td class="pb-0 pt-1 tc">Current Status</td>
+                          </tr>
+                          <tr>
+                            <th class="tc py-0" scope="row"></th>
+                            <th class="tc py-0">CNF/B1/12/UB</th>
+                            <th class="tc py-0">B1</th>
+                            <th class="tc py-0">12</th>
+                            <th class="tc py-0">Upper </th>
+                            <th class="tc py-0" style="color: green;">CNF/B1/12/UB</th>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                                    Cancel
+                                </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelModalLabel">Confirm Cancellation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to cancel this ticket?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Confirm Cancellation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.card').forEach(function(card) {
+            card.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+            });
+        });
+
+    </script>
+</body>
+</html>

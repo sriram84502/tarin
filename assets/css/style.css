@@ -1,0 +1,205 @@
+body{
+    background-color: #ECFDF5 !important;
+}
+
+body,html{
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: transparent;
+}
+
+.nav-link{
+    color: #0b8262 !important;
+}
+
+.hero-container {
+    height: 80vh;
+    align-items: center;
+    width: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-text {
+    color: #064E3B;
+    padding: 0 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hero-text h1 {
+    font-size: 3.75vw;
+    font-weight: 600;
+}
+
+.features{
+    background-color: #D1FAE5;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 0 5%;
+}
+
+.features-num{
+    width: 40px; 
+    height: 40px; 
+    background: #064E3B; 
+    border-radius: 48px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px; 
+    display: inline-flex;
+}
+
+.features-num div{
+    text-align: center; 
+    color: #D1FAE5; 
+    font-size: 18px; 
+    font-family: IBM Plex Sans; 
+    font-weight: 400; 
+    line-height: 27px; 
+    word-wrap: break-word;
+}
+
+.features-content{
+    width: 314.67px; 
+    color: #059669; 
+    font-size: 18px; 
+    font-family: IBM Plex Sans; 
+    font-weight: 400; 
+    line-height: 27px; 
+    word-wrap: break-word;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #059669;
+}
+
+.hero-text .btn {
+    background-color: #65A30D;
+    color: white;
+    padding: 14px 64px;
+    border-radius: 8px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    
+}
+.arrow p{
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    left: 48%;
+    bottom: 0;
+    font-size: 60px;
+    transform: rotateZ(180deg);
+}
+
+@media (max-width: 767.98px) {
+    .hero-container {
+        flex-direction: column;
+        height: max-content;
+    }
+    
+    .features{
+        margin-top: 210px;
+    }
+
+    .graph-image{
+        display: none;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .table-title{
+        display: flex;
+        align-items: start;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #059669;
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #65A30D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4c8c0f;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #65A30D;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #4c8c0f;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #059669;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #064E3B;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #064E3B;font-weight: 600;"><img src="./assets/images/fav.png" height="40px" style="max-height: 40px;" alt="" srcset="">TicketTrak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link active" style="font-weight: 700;" aria-current="page" href="book.html">Book Ticket</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="view.html">View Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#" tabindex="-1" style="background-color: #65A30D;color: #ECFDF5 !important; border-radius: 8px;padding: 8px 18px; text-align: center;" aria-disabled="true">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Book Ticket</h2>
+        <form id="booking-form">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID:</label>
+                <input type="text" id="id" name="id" class="form-control" readonly value="AUTO123">
+            </div>
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="boarding-station" class="form-label">Boarding Station:</label>
+                <input type="text" id="boarding-station" name="boarding-station" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="destination-station" class="form-label">Destination Station:</label>
+                <input type="text" id="destination-station" name="destination-station" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="ticket-category" class="form-label">Ticket Category:</label>
+                <select id="ticket-category" name="ticket-category" class="form-select" required>
+                    <option value="first-class">First Class</option>
+                    <option value="ac-tier-1">A.C Tier 1</option>
+                    <option value="ac-tier-2">A.C Tier 2</option>
+                    <option value="tatkal">Tatkal</option>
+                    <option value="tatkal">General</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="trains" class="form-label">Trains Available:</label>
+                <select id="trains" name="trains" class="form-select" required>
+                    <option value="train1">Train 1</option>
+                    <option value="train2">Train 2</option>
+                    <option value="train2">Train 3</option>
+                    <option value="train2">Train 4</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="number-of-tickets" class="form-label">Number of Tickets:</label>
+                <input type="number" id="number-of-tickets" name="number-of-tickets" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <div class="modal fade" id="confirmation-modal" tabindex="-1" aria-labelledby="confirmation-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmation-modal-label">Booking Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your ID: <span id="popup-id"></span></p>
+                    <p>Train ID: <span id="popup-train-id"></span></p>
+                    <p>Boarding Station: <span id="popup-boarding-station"></span></p>
+                    <p>Destination Station: <span id="popup-destination-station"></span></p>
+                    <p>Number of Tickets: <span id="popup-number-of-tickets"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirm-button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                Ticket booked successfully!
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('booking-form');
+            const confirmationModal = new bootstrap.Modal(document.getElementById('confirmation-modal'));
+            const toast = new bootstrap.Toast(document.getElementById('toast'));
+            
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                
+                document.getElementById('popup-id').textContent = document.getElementById('id').value;
+                document.getElementById('popup-train-id').textContent = document.getElementById('trains').value;
+                document.getElementById('popup-boarding-station').textContent = document.getElementById('boarding-station').value;
+                document.getElementById('popup-destination-station').textContent = document.getElementById('destination-station').value;
+                document.getElementById('popup-number-of-tickets').textContent = document.getElementById('number-of-tickets').value;
+                
+                confirmationModal.show();
+            });
+            
+            document.getElementById('confirm-button').addEventListener('click', () => {
+                confirmationModal.hide();
+                
+                toast.show();
+                setTimeout(() => {
+                    window.location.href = 'index.html'; 
+                }, 3000); 
+            });
+        });
+    </script>
+</body>
+</html>
