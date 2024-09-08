@@ -90,13 +90,14 @@
         <div class="container">
             <h3 class="title" style="font-weight: 600;">Login</h3>
             <p style="color: #059669;">Welcome Back!</p>
-            <form id="loginForm">
+            <form id="loginForm" action="index.html">
                 <div class="form-floating mb-3 mx-2">
                     <input type="email" required class="form-control" id="floatingEmail" placeholder="Email">
                     <label for="floatingEmail">Email</label>
                 </div>
                 <div class="form-floating mb-3 mx-2">
-                    <input type="password" required class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" required class="form-control" minlength="8" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}"
+                    title="Password must be at least 8 characters long, contain at least one uppercase letter, one number, and one special character." id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
                 </div>
                 <button type="submit" class="btn btn-success mt-3 w-100 py-2" style="border-radius: 8px; background-color: #65A30D;">Login</button>
