@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #064E3B;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #064E3B;font-weight: 600;">
+                <img src="./assets/images/fav.png" height="40px" alt="TicketTrak"> TicketTrak
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="admin-home.html">Home</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="train-register.html">Register Train</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-weight: 700;" aria-current="page" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="login.html" tabindex="-1"
+                            style="background-color: #65A30D;color: #ECFDF5 !important; border-radius: 8px;padding: 8px 18px; text-align: center;"
+                            aria-disabled="true">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>User Profiles</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Manage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sriram</td>
+                    <td>8309554288</td>
+                    <td>sriram@example.com</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal1">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteUser(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Anusha</td>
+                    <td>9876543210</td>
+                    <td>anusha@example.com</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal2">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteUser(2)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ravi Kumar</td>
+                    <td>9123456789</td>
+                    <td>ravikumar@example.com</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal3">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteUser(3)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sneha</td>
+                    <td>8987654321</td>
+                    <td>sneha@example.com</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal4">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteUser(4)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Rajesh</td>
+                    <td>8123456780</td>
+                    <td>rajesh@example.com</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal5">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteUser(5)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Update Modals -->
+    <div class="modal fade" id="updateModal1" tabindex="-1" aria-labelledby="updateModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel1">Update User - Sriram</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateForm1">
+                        <div class="mb-3">
+                            <label for="username1" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username1" value="Sriram" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobile1" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile1" value="8309554288" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email1" class="form-label">Email Id</label>
+                            <input type="email" class="form-control" id="email1" value="sriram@example.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat similar modals for other users -->
+    <!-- You can use the same structure as #updateModal1 and just change the IDs and labels accordingly -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        function deleteUser(userId) {
+            if (confirm('Are you sure you want to delete this user?')) {
+                // Add your delete logic here
+                console.log('User ' + userId + ' deleted.');
+            }
+        }
+    </script>
+</body>
+
+</html>
